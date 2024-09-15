@@ -1,4 +1,3 @@
-function solution(myString) {
-    let emphA = myString.toLowerCase(); 
-    return emphA.replaceAll("a","A");
+function solution(myString) { 
+    return myString.toLowerCase().replaceAll("a","A");
 }
