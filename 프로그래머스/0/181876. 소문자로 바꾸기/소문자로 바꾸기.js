@@ -1,0 +1,1 @@
+solution = (myString) => myString.toLowerCase(); 
