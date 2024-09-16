@@ -1,0 +1,1 @@
+solution = flo => Math.floor(flo)
