@@ -1,19 +1,13 @@
 function solution(n, lost, reserve) {
-  let realLost = lost.filter((l) => !reserve.includes(l));
-  let realReserve = reserve.filter((r) => !lost.includes(r));
-    
-  realLost.sort((a, b) => a - b); 
-  realReserve.sort((a, b) => a - b);
-
-  realLost = realLost.filter((l) => {
-    let found = realReserve.find((r) => Math.abs(r - l) === 1);
-    if (found !== undefined) {
-      realReserve = realReserve.filter((r) => r !== found);
-      return false; 
+    var answer = 0;
+    let plus1 = lost.map((i)=>i+1) 
+    let minus1 = lost.map((i)=>i-1) 
+    // let pVal = plus1.reduce((i)=> reserve.includes(i) ? answer +=1 : null)
+    // return pVal
+    for(let i in plus1){
+        reserve.includes(i) ? answer += 1 : null 
     }
-    return true; 
-  });
-
-  return n - realLost.length;  
+    return  reserve.includes(3)
 }
+
 
